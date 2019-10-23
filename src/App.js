@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import store from "./store";
 import { Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from "./components/Home";
