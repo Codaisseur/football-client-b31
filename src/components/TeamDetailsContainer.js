@@ -3,6 +3,7 @@ import TeamDetails from "./TeamDetails";
 import { connect } from "react-redux";
 import { loadTeam } from "../actions/teams";
 import CreatePlayerFormContainer from "./CreatePlayerFormContainer";
+import DeleteTeamButtonContainer from "./DeleteTeamButtonContainer";
 import { Link } from "react-router-dom";
 
 class TeamDetailsContainer extends React.Component {
@@ -19,6 +20,7 @@ class TeamDetailsContainer extends React.Component {
         ) : (
           <Link to="/login">Please log in to add players to this team.</Link>
         )}
+        <DeleteTeamButtonContainer />
       </>
     );
   }

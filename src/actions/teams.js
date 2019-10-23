@@ -67,3 +67,18 @@ export const loadTeam = id => (dispatch, getState) => {
     dispatch(fetchTeamSuccess(response.body));
   });
 };
+
+export const DELETE_TEAM_SUCCESS = "DELETE_TEAM_SUCCESS";
+
+const deleteTeamSuccess = teamId => ({
+  type: DELETE_TEAM_SUCCESS,
+  payload: teamId
+});
+
+export const deleteTeam = id => (dispatch, getState) => {
+  request
+    .delete(`${baseUrl}/teams/${id}`)
+    .then(response => {
+      dispatch(deleteTeamSuccess(id));
+    });
+};
