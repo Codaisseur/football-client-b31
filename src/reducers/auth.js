@@ -6,8 +6,8 @@ const initialState = token ? token : null;
 export default (state = initialState, action = {}) => {
   switch (action.type) {
     case LOGIN_SUCCESS:
-      localStorage.setItem("jwt", action.payload);
-      return action.payload;
+      localStorage.setItem("jwt", action.payload.jwt);
+      return action.payload.jwt;
     default:
       return state;
   }
