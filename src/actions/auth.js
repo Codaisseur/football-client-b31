@@ -1,9 +1,10 @@
 // TODO login action
 
 import request from "superagent";
-const baseUrl = "http://localhost:4000";
+export const baseUrl = "http://localhost:4000";
 
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
 
 export const login = (email, password) => (dispatch, getState) => {
   console.log(email, password);
